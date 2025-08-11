@@ -1,7 +1,8 @@
-import cProfile
+#import cProfile
+from line_profiler import profile
+
 import random
 import time
-
 
 def generate_numbers(n):
     """Generate a list of random integers."""
@@ -9,7 +10,7 @@ def generate_numbers(n):
     time.sleep(0.1)  # Simulate slow I/O
     return numbers
 
-
+@profile
 def is_prime(num):
     """Check if a number is prime."""
     if num < 2:
@@ -46,5 +47,6 @@ def main():
 
 
 if __name__ == "__main__":
+    main()
     # Profile the 'main' function
-    cProfile.run("main()")
+    #cProfile.run("main()")
