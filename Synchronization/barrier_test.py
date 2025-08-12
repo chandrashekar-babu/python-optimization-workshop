@@ -9,7 +9,7 @@ def random_sleep_and_print():
     v = randint(5, 30)
     sleep(v)
     print(f"{thread_name}: Woke up!")
-    msg_barrier.wait()
+    #msg_barrier.wait()
     print(f"{thread_name}: Continuing!")
 
 
