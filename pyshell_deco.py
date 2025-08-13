@@ -21,6 +21,11 @@ def exit_shell(*args):
     print("Exiting...")
     exit(0)
 
+@pyshell.for_command("cd")
+def chdir(*args):
+    import os
+    os.chdir(args[1])
+    
 @pyshell.invalid
 def invalid_command(*args):
     print("Invalid command -", args[0])

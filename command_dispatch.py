@@ -4,15 +4,18 @@ class CommandDispatch:
         self.dispatch = {}
 
     def for_command(self, command):
-        pass # TODO
+        def decorate(fn):
+            self.dispatch[command] = fn
+        return decorate
 
     def invalid(self, fn):
-        pass # TODO
+        self.invalidfn = fn
 
     def input(self, fn):
-        pass # TODO
+        self.inputfn = fn
 
     def run(self):
         while True:
-            pass # TODO
-        
+            args = self.inputfn(self.config)
+            self.dispatch.get(args[0], self.invalidfn)(*args)
+            
