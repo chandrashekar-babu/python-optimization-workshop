@@ -12,7 +12,7 @@ NUM_SERIES = 1_000_000
 NUM_THREADS = 4
 
 
-@njit(boolean(uint64))
+@njit(boolean(uint64), nogil=True)
 def is_prime(number):
     """Returns True if 'number' is prime"""
     limit = int(number ** 0.5) + 1
@@ -22,7 +22,7 @@ def is_prime(number):
     return True
 
 
-@njit(void(uint64, uint64, uint64))
+@njit(void(uint64, uint64, uint64), nogil=True)
 def print_primes(start, stop, tid):
     """Store prime numbers from start to stop into primes
     list passed as arguments
