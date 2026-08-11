@@ -1,4 +1,4 @@
-from threading import Thread, Lock as Lock
+from threading import Thread, RLock as Lock
 
 stats = {
   "foo": 0,

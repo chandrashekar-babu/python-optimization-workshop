@@ -58,7 +58,7 @@ def consumer():
     while True:
         v = queue.get()
         print("Consumed: ", v, "Queue =", queue.show())
-        sleep(random()/100)
+        sleep(random())
 
 
 p = Thread(target=producer)

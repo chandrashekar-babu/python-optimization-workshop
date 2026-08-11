@@ -9,7 +9,7 @@ def counter(count, delay):
 
 if __name__ == '__main__':
     t1 = Thread(target=counter, args=(10, 1))
-    t2 = Thread(target=counter, args=(20, 1))
+    t2 = Thread(target=counter, args=(20, 1), daemon=True)
 
     t1.start()
     t2.start()

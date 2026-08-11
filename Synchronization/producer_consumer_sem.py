@@ -48,7 +48,7 @@ def consumer():
     while True:
         v = queue.get()
         print("Consumed: ", v, "Queue =", queue)
-        sleep((v/100.0) + 0.3)
+        sleep((v/100.0)+0.3)
 
 p = Thread(target=producer)
 c = Thread(target=consumer)
