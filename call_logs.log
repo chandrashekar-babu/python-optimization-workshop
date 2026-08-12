@@ -1,0 +1,9 @@
+Wed Aug 12 12:25:29 2026: function square invoked with args=(2,), kwargs={}, returned 4.
+Wed Aug 12 12:25:29 2026: function square invoked with args=(5.6,), kwargs={}, returned 31.359999999999996.
+Wed Aug 12 12:25:29 2026: function square invoked with args=(4,), kwargs={}, returned 16.
+Wed Aug 12 12:26:14 2026: function square invoked with args=(2,), kwargs={}, returned 4.
+Wed Aug 12 12:26:14 2026: function greet invoked with args=('John',), kwargs={}, returned None.
+Wed Aug 12 12:26:14 2026: function square invoked with args=(5.6,), kwargs={}, returned 31.359999999999996.
+Wed Aug 12 12:26:14 2026: function square invoked with args=(4,), kwargs={}, returned 16.
+Wed Aug 12 12:26:14 2026: function greet invoked with args=('Sam',), kwargs={}, returned None.
+Wed Aug 12 12:36:14 2026: function to_strong.<locals>.wrap invoked with args=(), kwargs={}, returned <strong>HELLO, WORLD</strong>.
