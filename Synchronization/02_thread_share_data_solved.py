@@ -1,6 +1,8 @@
 from threading import Thread, Lock
+from time import sleep
+from random import random
 
-SIZE = 100_000
+SIZE = 100
 
 nums = list(range(SIZE))
 nums_lk = Lock()
@@ -10,7 +12,9 @@ def pick_elements(dataset, howmany, result):
         with nums_lk:
             value = dataset[0]
             result.append(value)
+            sleep(random() / 10)
             del dataset[0]
+
         #result.append(dataset.pop())
 
 if __name__ == '__main__':

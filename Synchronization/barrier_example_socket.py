@@ -11,7 +11,7 @@ PORT = randint(6000, 8000)
 def server():
     try:
         listener = socket(AF_INET, SOCK_STREAM)
-        sleep(1)
+        sleep(3)
         listener.bind(("127.0.0.1", PORT))
         listener.listen(SOMAXCONN)
 

@@ -1,4 +1,5 @@
-from threading import Thread
+#from threading import Thread
+from multiprocessing import Process as Thread
 
 def profile(func):
     import time
@@ -14,7 +15,7 @@ def profile(func):
 def cpu_bound_task():
     # Simulate a CPU-bound task
     count = 0
-    for i in range(10**8):
+    for i in range(10**7):
         count += i
     return count
 
