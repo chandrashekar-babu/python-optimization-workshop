@@ -39,9 +39,10 @@ void* print_primes(void *args)
 
 	for(i=start; i<stop; i++) {
 		if (is_prime(i)) {
-			printf("Thread-%u: %lu\n", id, i);
+			printf("Thread-%u: %d\n", id, i);
 		}
 	}
+	return NULL;
 }
 
 int main()

@@ -21,14 +21,14 @@ static inline long double duration(stop_watch_t *watch)
 static inline void start_watch(stop_watch_t *watch)
 {
 	struct timespec ts;
-	clock_gettime(CLOCK_BOOTTIME, &ts);
+	clock_gettime(CLOCK_REALTIME, &ts);
 	watch->start_time = timespec_to_sec(ts);
 }
 
 static inline long double stop_watch(stop_watch_t *watch)
 {
 	struct timespec ts;
-	clock_gettime(CLOCK_BOOTTIME, &ts);
+	clock_gettime(CLOCK_REALTIME, &ts);
 	watch->stop_time = timespec_to_sec(ts);
 	return duration(watch);
 }
